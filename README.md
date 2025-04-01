@@ -524,13 +524,7 @@ echo $?
 ## OUTPUT 
 ![57 echo 2nd](https://github.com/user-attachments/assets/d26218b0-23ec-43ec-adbf-c316c2233bd3)
 
-abcd
- 
-echo $?
- ## OUTPUT
 
-
- 
 # mis-using string comparisons
 
 cat < strcomp.sh 
