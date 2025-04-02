@@ -559,6 +559,7 @@ chmod 755 strcomp.sh
  
 ./strcomp.sh 
 ## OUTPUT
+![58 strcomp sh](https://github.com/user-attachments/assets/121fcda9-f9f0-4813-8c77-d50bb6301c19)
 
 
 # check file ownership
@@ -586,6 +587,7 @@ fi
  ```
 ./psswdperm.sh
 ## OUTPUT
+![59 passwdperm](https://github.com/user-attachments/assets/2d1ee9d8-9d89-403c-82ce-9d1d81909408)
 
 # check if with file location
 cat>ifnested.sh 
@@ -632,6 +634,7 @@ fi
 
 ./ifnested.sh 
 ## OUTPUT
+![60 ifnested](https://github.com/user-attachments/assets/5f30124d-37c6-438c-8184-90da50d79cb4)
 
 
 
@@ -675,56 +678,9 @@ fi
 $ chmod 755 iftest.sh
  
 $ ./iftest.sh 
-##OUTPUT
+## OUTPUT
+![61 iftest](https://github.com/user-attachments/assets/e723234d-3d3e-4a90-a1aa-a03a8b6e2648)
 
-# check if a file
-cat > ifnested.sh 
-```bash
-\#!/bin/bash
-if [ -e $HOME ]
-then
-echo “$HOME The object exists, is it a file?”
-if [ -f $HOME ]
-then
-echo “Yes,$HOME it is a file!”
-else
-echo “No,$HOME it is not a file!”
-if [ -f $HOME/.bash_history ]
-then
-echo “But $HOME/.bash_history is a file!”
-fi
-fi
-else
-echo “Sorry, the object does not exist”
-fi
-^d
-```
-
-cat ifnested.sh 
-```bash
-\#!/bin/bash
-if [ -e $HOME ]
-then
-echo “$HOME The object exists, is it a file?”
-if [ -f $HOME ]
-then
-echo “Yes,$HOME it is a file!”
-else
-echo “No,$HOME it is not a file!”
-if [ -f $HOME/.bash_history ]
-then
-echo “But $HOME/.bash_history is a file!”
-fi
-fi
-else
-echo “Sorry, the object does not exist”
-fi
-```
-
-$ chmod 755 ifnested.sh
- 
-$ ./ifnested.sh 
-##OUTPUT
 
 # looking for a possible value using elif
 cat elifcheck.sh 
@@ -753,6 +709,7 @@ $ chmod 755 elifcheck.sh
  
 $ ./elifcheck.sh 
 ## OUTPUT
+![62 elifcheck](https://github.com/user-attachments/assets/317383d5-e8f5-425b-9473-b729db7b8fe4)
 
 
 # testing compound comparisons
@@ -769,9 +726,11 @@ fi
 $ chmod 755 ifcompound.sh
 $ ./ifcompound.sh 
 ## OUTPUT
+![63 ifcompound](https://github.com/user-attachments/assets/22de088a-1fb2-49eb-abd5-dc177e2250bb)
+
 
 # using the case command
-cat >casecheck.sh 
+cat > casecheck.sh 
 ```bash
 case $USER in
 Ram | Robert)
@@ -788,6 +747,9 @@ esac
 $ chmod 755 casecheck.sh 
  
 $ ./casecheck.sh 
+## OUTPUT
+![64 casecheck](https://github.com/user-attachments/assets/3a0a035a-0510-436e-817f-1365094c73b8)
+
  
 cat > whiletest
 ```bash
@@ -803,8 +765,9 @@ done
 $ chmod 755 whiletest.sh
  
 $ ./whiletest.sh
- 
- 
+## OUTPUT
+![65 whiletest](https://github.com/user-attachments/assets/2574d1c9-87a8-4583-9b4a-c856d90ce62b)
+
 cat untiltest.sh 
 ```bash
 \#using the until command
@@ -816,10 +779,14 @@ var1=$[ $var1 - 25 ]
 done
 ``` 
 $ chmod 755 untiltest.sh
+
+$ ./untiltest.sh
+## OUTPUT
+![66 untiltest](https://github.com/user-attachments/assets/dc3762b9-ac94-468e-8c0f-813e59fe9c4b)
+
  
  
- 
-cat forin1.sh 
+cat > forin1.sh 
 ```bash
 \#!/bin/bash
 \#basic for command
@@ -830,9 +797,12 @@ done
  ```
  
 $ chmod 755 forin1.sh
+$ ./forin1.sh
+## OUTPUT
+![67 forin1](https://github.com/user-attachments/assets/7dd1cf2b-31eb-4e0a-b4f6-b0c3fb8e74b2)
+
  
- 
-cat forin2.sh 
+cat > forin2.sh 
 ```bash
 \#!/bin/bash
 \# another example of how not to use the for command
@@ -843,21 +813,11 @@ done
  ```
  
 $ chmod 755 forin2.sh
- 
-cat forin2.sh 
-```bash
-\#!/bin/bash
-\# another example of how not to use the for command
-for test in I don't know if this'll work
-do
-echo “word:$test”
-done
-```
-$ chmod 755 forin2.sh
- 
 $ ./forin2.sh 
- 
-cat forin3.sh 
+## OUTPUT
+![68 forin2](https://github.com/user-attachments/assets/d85f5c18-7d76-4faa-977c-197df36cadce)
+
+cat > forin3.sh 
 ```bash
 \#!/bin/bash
 \# another example of how not to use the for command
@@ -867,20 +827,11 @@ echo "word:$test"
 done
 ```
 $ ./forin3.sh 
- 
-cat forin1.sh 
-```bash
-#!/bin/bash
-# basic for command
-for test in Alabama Alaska Arizona Arkansas California Colorado
-do
-echo The next state is $test
-done
-```
-$ chmod 755 forin1.sh
-
 ## OUTPUT
-cat forinfile.sh 
+![69 forin3](https://github.com/user-attachments/assets/b7c9a5c1-6132-4a8c-b272-d2e2606ab81b)
+ 
+
+cat > forinfile.sh 
 ```bash
 #!/bin/bash
 # reading values from a file
@@ -891,7 +842,10 @@ echo "Visit beautiful $file“
 done
 ```
 $ chmod 777 forinfile.sh
-$ cat cities
+$ ./forinfile.sh
+
+$ cat > cities
+```
 Hyderabad
 Alampur
 Basara
@@ -899,11 +853,12 @@ Warangal
 Adilabad
 Bhadrachalam
 Khammam
-
+```
 ## OUTPUT
+![70 forinfile](https://github.com/user-attachments/assets/2b7c17a8-3cf1-4c26-b6ac-47d87f59c9fe)
 
 
-cat forctype.sh 
+cat > forctype.sh 
 ```bash
 #!/bin/bash
 # testing the C-style for loop
@@ -915,8 +870,10 @@ done
 $ chmod 755 forctype.sh
 $ ./forctype.sh 
 ## OUTPUT
+![71 forctype](https://github.com/user-attachments/assets/9ef55542-378a-457a-9906-9f761a3b1c77)
 
-cat forctype1.sh 
+
+cat > forctype1.sh 
 ```bash
 #!/bin/bash
 # multiple variables
@@ -929,7 +886,7 @@ $ chmod 755 forctype.sh
 $ ./forctype1.sh 
 ## OUTPUT
 
-cat fornested1.sh 
+cat > fornested1.sh 
 ```bash
 #!/bin/bash
 # nesting for loops
@@ -946,9 +903,10 @@ $ chmod 755 fornested1.sh
  
 $ ./fornested1.sh 
  ## OUTPUT
+![73 fornested1](https://github.com/user-attachments/assets/be62448e-10de-41ef-b2ea-da191f539ec2)
 
  
-cat forbreak.sh 
+cat > forbreak.sh 
 ```bash
 #!/bin/bash
 # breaking out of a for loop
@@ -962,13 +920,14 @@ echo "Iteration number: $var1"
 done
 echo "The for loop is completed“
 ```
-## OUTPUT
-
 $ chmod 755 forbreak.sh
  
-$ ./forbreak.sh 
+$ ./forbreak.sh
+## OUTPUT 
+![74 forbreak](https://github.com/user-attachments/assets/6cfc6f63-7c79-4fe9-a5be-8e59de9a6695)
+
  
-cat forbreak.sh 
+cat > forcontinue.sh 
 ```bash
 #!/bin/bash
 # breaking out of a for loop
@@ -980,16 +939,16 @@ continue
 fi
 echo "Iteration number: $var1"
 done
-echo "The for loop is completed“
+echo "The for loop is completed"
 ```
 
- 
 $ chmod 755 forcontinue.sh
  
 $ ./forcontinue.sh 
 ## OUTPUT
- 
-cat exread.sh 
+![75 forcontinue](https://github.com/user-attachments/assets/183e2b03-acc7-4cee-9f8e-6681b47967e0)
+
+cat > exread.sh 
 ```bash
 #!/bin/bash
 # testing the read command
@@ -1002,24 +961,23 @@ $ chmod 755 exread.sh
  
 $ ./exread.sh 
 ## OUTPUT
+![76 exread](https://github.com/user-attachments/assets/6829e615-a8ba-46e7-abb9-189466e558cc)
 
 
- cat exread1.sh
+ cat > exread1.sh
 ```bash
 #!/bin/bash
 # testing the read command
 read -p "Enter your name: " name
-echo "Hello $name, welcome to my program. “
+echo "Hello $name, welcome to my program. "
 ``` 
 $ chmod 755 exread1.sh 
 
-## OUTPUT
-
-
-
 $ ./exread1.sh 
- 
-cat funcex.sh
+## OUTPUT
+![77 exread1](https://github.com/user-attachments/assets/f198378f-f1af-4def-a5f9-57e0d0b5428a)
+
+cat > funcex.sh
 ```bash
 #!/bin/bash
 # trying to access script parameters inside a function
@@ -1034,14 +992,14 @@ else
 echo "Usage: badtest1 a b"
 fi
 ```
+./funcex.sh 
+ 
+./funcex.sh 1 2
 ## OUTPUT
- ./funcex.sh 
+![78 funcex](https://github.com/user-attachments/assets/ad5ba310-b8e0-4908-886c-218c8142e13c)
 
  
- ./funcex.sh 1 2
-
- 
-cat argshift.sh
+cat > argshift.sh
 ```bash
 #!/bin/bash 
  while (( "$#" )); do 
@@ -1051,10 +1009,11 @@ done
 ```
 $ chmod 777 argshift.sh
 
-## OUTPUT
 $ ./argshift.sh 1 2 3
- 
- cat argshift1.sh
+## OUTPUT
+![79 argshift](https://github.com/user-attachments/assets/9ef9dd1f-69f6-4c94-b9a8-02dbd0fc15d3)
+
+ cat > argshift1.sh
 ```bash
  #/bin/bash 
  # store arguments in a special array 
@@ -1063,15 +1022,17 @@ args=("$@")
 ELEMENTS=${#args[@]} 
  # echo each element in array  
 # for loop 
-for (( i=0;i<$ELEMENTS;i++)); do 
+for (( i=0;i<$ELEMENTS;i++ )); do 
     echo ${args[${i}]} 
 done
 ```
-$ chmod 777 argshift.sh
+$ chmod 777 argshift1.sh
+
+$ ./argshift1.sh 1 2 3
 ## OUTPUT
-$ ./argshift.sh 1 2 3
- 
-cat argshift.sh
+![80 argshift1](https://github.com/user-attachments/assets/c4e92756-3e8f-4b30-87b4-f9ac7401493d)
+
+cat > argshift2.sh
 ```bash
 #!/bin/bash 
 set -x 
@@ -1081,9 +1042,11 @@ while (( "$#" )); do
 done
 set +x
 ```
+$ chmod 777 argshift2.sh
+$ ./argshift2.sh 1 2 3
 ## OUTPUT
- ./argshift.sh 1 2 3
- 
+![81 argshift2](https://github.com/user-attachments/assets/33f3b44a-a001-4832-a00f-fbfdd9d0c6d3)
+
  
 cat > nc.awk
 ```bash
@@ -1099,7 +1062,7 @@ print "Number of Lines are",NR
 print "No of Words count:",wordcount
 }
  ```
-cat>data.dat
+cat > data.dat
 ```bash
 bcdfghj
 abcdfghj
@@ -1114,7 +1077,9 @@ ubcdfghj
 ```
 awk -f nc.awk data.dat
 ## OUTPUT 
- 
+![82 nc awk](https://github.com/user-attachments/assets/d24226e6-d568-4771-bc6f-5b7992d88218)
+
+
 cat > palindrome.sh
 ```bash
 #num=545
@@ -1140,7 +1105,11 @@ else
 	echo "Number is NOT palindrome"
 fi
 ```
+$ chmod 755 palindrome.sh
+
+$ ./palindrome.sh  
 ## OUTPUT 
+![82 nc awk](https://github.com/user-attachments/assets/cc790d56-b6c1-4bc3-96d3-34351bd70428)
 
 
 # RESULT:
