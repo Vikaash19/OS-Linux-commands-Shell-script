@@ -1109,7 +1109,8 @@ $ chmod 755 palindrome.sh
 
 $ ./palindrome.sh  
 ## OUTPUT 
-![82 nc awk](https://github.com/user-attachments/assets/cc790d56-b6c1-4bc3-96d3-34351bd70428)
+![83 palindrome](https://github.com/user-attachments/assets/8aaeada0-89b9-4f69-bd19-46e3a1c7883a)
+
 
 
 # RESULT:
